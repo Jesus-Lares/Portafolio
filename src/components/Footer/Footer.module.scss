@@ -1,0 +1,29 @@
+@import "../../../styles/variables.scss";
+.footer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 2rem 0;
+  background-color: getColor(container);
+  border-top: 1px solid getColor(container);
+  justify-content: center;
+  align-items: center;
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    &:hover {
+      text-decoration: underline;
+      color: getColor(primary);
+    }
+  }
+}
+
+.links {
+  margin: 0.5em 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}

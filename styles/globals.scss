@@ -1,31 +1,34 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 @import "./variables.scss";
 
+:root {
+  @each $name, $color in $colors {
+    --color-#{$name}: #{$color};
+  }
+  --theme: "light";
+}
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
-html,
-body {
-}
 html {
   scroll-behavior: smooth;
 }
 body {
-  margin: 0 0 $header-height 0;
+  margin: 0;
   font-family: "Poppins", sans-serif;
   font-size: $normal-font-size;
-  background-color: $body-color;
-  color: $text-color;
+  background-color: getColor(container-secondary);
+  color: getColor(text-light);
 }
 
 h1,
 h2,
 h3,
 h4 {
-  color: $title-color;
+  color: getColor(primary);
   font-weight: $font-semi-bold;
 }
 ul {
@@ -52,4 +55,15 @@ a {
 .section__title,
 .section__subtitle {
   text-align: center;
+}
+
+.container {
+  max-width: 768px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
 }

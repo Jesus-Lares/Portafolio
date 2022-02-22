@@ -1,17 +1,20 @@
-$header-height: 3rem;
+$header-height: 4rem;
 
-$hue-color: 230;
-
-$first-color: hsl($hue-color, 69%, 61%);
-$first-color-second: hsl($hue-color, 69%, 61%);
-$first-color-alt: hsl($hue-color, 57%, 53%);
-$first-color-lighter: hsl($hue-color, 92%, 85%);
-$title-color: hsl($hue-color, 8%, 15%);
-$text-color: hsl($hue-color, 8%, 45%);
-$text-color-light: hsl($hue-color, 8%, 65%);
-$input-color: hsl($hue-color, 70%, 96%);
-$body-color: hsl($hue-color, 60%, 99%);
-$container-color: #fff;
+$hue-color: 220;
+@function getColor($color-name) {
+  @return var(--color-#{$color-name});
+}
+$colors: (
+  container: hsl($hue-color, 14, 13),
+  container-secondary: hsl($hue-color, 60, 99),
+  primary: hsl($hue-color, 69, 61),
+  primary-alt: hsl($hue-color, 57, 53),
+  lighter: hsl($hue-color, 92, 85%),
+  title: hsl($hue-color, 8, 15),
+  text: hsl($hue-color, 8, 45),
+  text-light: hsl($hue-color, 8, 65%),
+  input: hsl($hue-color, 70, 96),
+);
 
 $big-font-size: 2rem;
 $h1-font-size: 1.5rem;
