@@ -1,0 +1,54 @@
+@import "../../../styles/variables.scss";
+
+.hero {
+  background: linear-gradient(
+    180deg,
+    getColor(container) 65%,
+    getColor(lighter) 99%
+  );
+  height: calc(100vh - $header-height);
+  padding: 1.5em;
+  overflow: hidden;
+}
+.container {
+  max-width: 968px;
+  display: flex;
+  height: 85%;
+  flex-direction: column;
+  position: relative;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  padding-left: clamp(0.5em, 8vw, 5em);
+  h1 {
+    color: #f7f7f7;
+    font-size: clamp(30px, 8vw, 50px);
+  }
+  h2 {
+    color: #f7f7f7;
+    font-size: clamp(16px, 4vw, 25px);
+    font-style: italic;
+    font-weight: 400;
+    max-width: clamp(300px, 50vw, 400px);
+  }
+}
+
+.animation {
+  display: none;
+  flex: 1;
+  padding: 2em;
+}
+
+@media screen and (min-width: 767px) {
+  .container {
+    flex-direction: row;
+  }
+  .animation {
+    display: block;
+  }
+}

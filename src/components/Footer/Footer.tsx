@@ -7,13 +7,15 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <Link href="#home">
-        <Image
-          src="/logo.svg"
-          alt="Jesus Lares Logo"
-          width={72}
-          height={65}
-          quality={50}
-        />
+        <a>
+          <Image
+            src="/logo.svg"
+            alt="Jesus Lares Logo"
+            width={72}
+            height={65}
+            quality={50}
+          />
+        </a>
       </Link>
       <div className={styles.links}>
         <a

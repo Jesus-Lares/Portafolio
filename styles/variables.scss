@@ -1,19 +1,18 @@
 $header-height: 4rem;
 
-$hue-color: 220;
 @function getColor($color-name) {
   @return var(--color-#{$color-name});
 }
 $colors: (
-  container: hsl($hue-color, 14, 13),
-  container-secondary: hsl($hue-color, 60, 99),
-  primary: hsl($hue-color, 69, 61),
-  primary-alt: hsl($hue-color, 57, 53),
-  lighter: hsl($hue-color, 92, 85%),
-  title: hsl($hue-color, 8, 15),
-  text: hsl($hue-color, 8, 45),
-  text-light: hsl($hue-color, 8, 65%),
-  input: hsl($hue-color, 70, 96),
+  container: hsl(233, 45%, 16%),
+  container-secondary: hsl(210, 32%, 28%),
+  primary: hsl(220, 70%, 40%),
+  primary-alt: hsl(220, 57%, 53%),
+  lighter: #b5b5b5,
+  title: hsl(210, 32%, 28%),
+  text: hsl(220, 10%, 30%),
+  text-light: hsl(220, 0%, 90%),
+  input: hsl(220, 70%, 96%),
 );
 
 $big-font-size: 2rem;
