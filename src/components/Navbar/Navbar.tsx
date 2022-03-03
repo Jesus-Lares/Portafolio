@@ -1,10 +1,10 @@
-import Image from "next/image";
 import { useEffect, useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { routeInterface, routes } from "../../utils/routes";
 
 import styles from "./Navbar.module.scss";
-import Link from "next/link";
 
 const Navbar = () => {
   const [check, setCheck] = useState<boolean>(false);

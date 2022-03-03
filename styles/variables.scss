@@ -8,11 +8,12 @@ $colors: (
   container-secondary: hsl(210, 32%, 28%),
   primary: hsl(220, 70%, 40%),
   primary-alt: hsl(220, 57%, 53%),
-  lighter: #b5b5b5,
+  lighter: #f8f8f8,
   title: hsl(210, 32%, 28%),
   text: hsl(220, 10%, 30%),
-  text-light: hsl(220, 0%, 90%),
+  text-light: rgb(255, 255, 255),
   input: hsl(220, 70%, 96%),
+  links: hsl(0, 0%, 66%),
 );
 
 $big-font-size: 2rem;

@@ -1,3 +1,5 @@
+@import "../../../styles/variables.scss";
+
 .container {
   position: relative;
   left: calc(50% - 50px);
@@ -9,7 +11,7 @@
 .text {
   display: block;
   margin-top: 75px;
-  color: white;
+  color: getColor(container);
   font-size: 12px;
   font-family: "Helvetica";
   text-transform: uppercase;
@@ -40,7 +42,7 @@
   content: "";
   position: absolute;
   top: 0;
-  background: white;
+  background: getColor(container-secondary);
   height: 100%;
   width: 53%;
 }

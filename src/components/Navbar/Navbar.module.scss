@@ -37,8 +37,9 @@
 }
 
 .nav__list {
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, auto);
   gap: 1.25rem;
+  margin-right: 2em;
 }
 
 .nav__link {
@@ -46,7 +47,7 @@
   flex-direction: column;
   align-items: center;
   font-size: $small-font-size;
-  color: getColor(title-light);
+  color: getColor(links);
   font-weight: $font-medium;
   &:hover {
     color: getColor(primary);

@@ -1,0 +1,15 @@
+@import "../../../styles/variables.scss";
+
+.container {
+  display: inline-block;
+}
+
+.title {
+  font-size: clamp($h1-font-size, 5vw, $big-font-size);
+}
+
+.bar {
+  height: 0.4em;
+  width: 100%;
+  background-color: getColor(title);
+}
