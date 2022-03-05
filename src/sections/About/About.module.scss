@@ -1,7 +1,7 @@
 @import "../../../styles/variables.scss";
 
 .about {
-  padding: 2em;
+  padding: 2.5em;
   overflow: hidden;
   max-width: 968px;
   margin: 0 auto;
@@ -17,7 +17,6 @@
   flex: 1;
   p {
     margin-bottom: clamp(15px, 4vw, 30px);
-    text-align: justify;
     font-size: $normal-font-size;
     strong {
       color: getColor(primary);

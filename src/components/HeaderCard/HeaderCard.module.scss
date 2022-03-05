@@ -1,0 +1,25 @@
+@import "../../../styles/variables.scss";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 2.5em;
+  margin-bottom: 0.75em;
+  h3 {
+    display: inline-block;
+    font-size: $h3-font-size;
+    max-width: 65%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  ul {
+    display: flex;
+    min-width: 18%;
+    justify-content: space-between;
+    li {
+      margin-left: 0.75em;
+    }
+  }
+}

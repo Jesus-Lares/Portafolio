@@ -9,6 +9,7 @@ $colors: (
   primary: hsl(220, 70%, 40%),
   primary-alt: hsl(220, 57%, 53%),
   lighter: #f8f8f8,
+  card: #fcfcfc,
   title: hsl(210, 32%, 28%),
   text: hsl(220, 10%, 30%),
   text-light: rgb(255, 255, 255),
@@ -33,6 +34,6 @@ $font-semi-bold: 600;
   $h2-font-size: 1.5rem;
   $h3-font-size: 1.25rem;
   $normal-font-size: 1rem;
-  $small-font-size: 0.875rem;
+  $small-font-size: 0.9rem;
   $smaller-font-size: 0.813rem;
 }

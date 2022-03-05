@@ -49,3 +49,56 @@ a {
   display: grid;
   gap: 1.5rem;
 }
+.icon {
+  &[data-tooltip] {
+    position: relative;
+  }
+  &[data-tooltip]::before,
+  &[data-tooltip]::after {
+    position: absolute;
+    display: none;
+    opacity: 0.85;
+  }
+  &[data-tooltip]::before {
+    content: attr(data-tooltip);
+    background: getColor(container);
+    color: getColor(lighter);
+    font-size: 13px;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    text-decoration: none;
+  }
+  &[data-tooltip]::after {
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    content: "";
+  }
+
+  &[data-tooltip]:hover::before,
+  &[data-tooltip]:hover::after {
+    display: block;
+  }
+  &[data-tooltip][data-placement="top"]::before {
+    bottom: 110%;
+    right: 20%;
+    margin-bottom: 0px;
+  }
+  &[data-tooltip][data-placement="top"]::after {
+    border-top-color: getColor(container);
+    border-bottom: none;
+    bottom: 95%;
+    right: 40%;
+  }
+}
+
+.tools {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: auto;
+  li {
+    margin-right: 1em;
+    font-size: $small-font-size;
+  }
+}
