@@ -22,6 +22,7 @@ body {
   font-size: $normal-font-size;
   background-color: getColor(lighter);
   color: getColor(text);
+  text-align: center;
 }
 
 h1,
@@ -37,6 +38,9 @@ ul {
 a {
   color: inherit;
   text-decoration: none;
+}
+p {
+  font-size: $normal-font-size;
 }
 
 .container {

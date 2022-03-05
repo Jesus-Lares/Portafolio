@@ -8,8 +8,7 @@
   font-size: 1rem;
   font-weight: $font-medium;
   transition: 0.5s all ease-in-out;
-  width: clamp(150px, 50%, 300px);
-  max-width: 300px;
+  width: clamp(150px, 55%, 300px);
   cursor: pointer;
   &:hover {
     background-color: getColor(container);

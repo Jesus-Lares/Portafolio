@@ -10,6 +10,7 @@
   max-height: 650px;
   padding: 1.5em;
   overflow: hidden;
+  text-align: start;
 }
 
 .container {
@@ -41,6 +42,9 @@
 }
 
 @media screen and (min-width: 767px) {
+  .hero {
+    padding: $header-height 1.5em 1.5em 1.5em;
+  }
   .container {
     flex-direction: row;
   }
