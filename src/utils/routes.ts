@@ -11,25 +11,24 @@ export interface routeInterface {
   name: string;
   icon: IconDefinition;
 }
-
 export const routes: routeInterface[] = [
   {
-    path: "#home",
+    path: `${process.env.URL}#home`,
     name: "Inicio",
     icon: faHouse,
   },
   {
-    path: "#about",
+    path: `${process.env.URL}#about`,
     name: "Acerca",
     icon: faUserAlt,
   },
   {
-    path: "#projects",
+    path: `${process.env.URL}#projects`,
     name: "Proyectos",
     icon: faBriefcase,
   },
   {
-    path: "#contact",
+    path: `${process.env.URL}#contact`,
     name: "Contacto",
     icon: faPaperPlane,
   },

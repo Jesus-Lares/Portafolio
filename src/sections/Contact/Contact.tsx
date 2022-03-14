@@ -14,7 +14,7 @@ const Contact = () => {
         </p>
         <a
           href="mailto:contacto@jesuslares.com"
-          rel="noopener noreferrer"
+          rel="noreferrer"
           target="_blank"
         >
           <Btn text="Iniciar conversación" onClick={() => {}} />

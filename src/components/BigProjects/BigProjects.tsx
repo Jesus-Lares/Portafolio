@@ -1,13 +1,15 @@
 import Image from "next/image";
 import { bigProjectInterface } from "../../utils/bigProjects";
 import HeaderCard from "../HeaderCard";
-import Icon from "../Icon";
 import styles from "./BigProjects.module.scss";
 
 interface props extends bigProjectInterface {
   index: number;
 }
 
+const myLoader = ({ src, width }: { src: string; width: number }) => {
+  return `${src}?w=${width}&q=75`;
+};
 const BigProjects = ({
   image,
   title,
@@ -24,7 +26,9 @@ const BigProjects = ({
     >
       <div className={styles.image_container}>
         <Image
-          src="/NotImage.webp"
+          priority
+          loader={myLoader}
+          src={`/${image}`}
           alt={title}
           width={310}
           height={165}
@@ -32,6 +36,7 @@ const BigProjects = ({
           loading="eager"
           layout="responsive"
           className={styles.image}
+          unoptimized
         />
       </div>
       <div className={styles.info}>

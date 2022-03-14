@@ -5,7 +5,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { routeInterface, routes } from "../../utils/routes";
 
 import styles from "./Navbar.module.scss";
-
+const myLoader = ({ src, width }: { src: string; width: number }) => {
+  return `${src}?w=${width}&q=75`;
+};
 const Navbar = () => {
   const [check, setCheck] = useState<boolean>(false);
 
@@ -37,6 +39,9 @@ const Navbar = () => {
               width={72}
               height={35}
               quality={50}
+              priority
+              loader={myLoader}
+              unoptimized
             />
           </a>
         </Link>

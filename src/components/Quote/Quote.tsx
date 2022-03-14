@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
+
 import styles from "./Quote.module.scss";
+
 interface quote {
   quote: { quote: string; writer: string };
   status: boolean;
@@ -10,7 +12,7 @@ const Quote = () => {
   const data = async () => {
     try {
       const response = await fetch(
-        "https://api-quotes2022.herokuapp.com/api/v1/apiQuotes/1",
+        `https://api-quotes2022.herokuapp.com/api/v1/apiQuotes/${process.env.QUOTES}`,
         {
           method: "GET",
           headers: {
@@ -24,6 +26,7 @@ const Quote = () => {
       }
 
       const result: quote = await response.json();
+
       if (result.status) {
         setQuote(result);
         return;
