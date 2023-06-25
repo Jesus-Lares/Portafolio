@@ -1,28 +1,25 @@
+import { Fragment } from "react";
 import type { GetStaticPropsContext } from "next";
-import About from "../src/sections/About";
-import Contact from "../src/sections/Contact";
-import Hero from "../src/sections/Hero";
-import Projects from "../src/sections/Projects";
-import {
-  bigProjectInterface,
-  projectInterface,
-  bigProjects,
-  smallProjects,
-} from "../src/utils/bigProjects";
+
+import { About, Contact, Hero, Projects } from "@e/home/sections";
+import { BigProject, Project } from "@interface";
+import { product } from "src/data";
+
+const { projects, bigProjects } = product;
 
 interface props {
-  bigProjects: bigProjectInterface[];
-  projects: projectInterface[];
+  bigProjects: BigProject[];
+  projects: Project[];
 }
 
 const Home = ({ bigProjects, projects }: props) => {
   return (
-    <>
+    <Fragment>
       <Hero />
       <About />
       <Projects bigProjects={bigProjects} projects={projects} />
       <Contact />
-    </>
+    </Fragment>
   );
 };
 
@@ -32,7 +29,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
   return {
     props: {
       bigProjects,
-      projects: smallProjects,
+      projects,
     },
   };
 }

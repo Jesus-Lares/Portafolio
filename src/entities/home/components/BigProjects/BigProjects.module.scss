@@ -1,0 +1,53 @@
+@import "../../../../../styles/variables.scss";
+
+.container {
+  margin: clamp(25px, 4vw, 50px) 0;
+  text-align: start;
+}
+
+.bigProjects {
+  display: flex;
+  flex-direction: column;
+  margin: clamp(15px, 4vw, 40px) 0;
+}
+
+.image_container {
+  flex: 1;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  overflow: hidden;
+  img {
+    object-fit: cover;
+  }
+}
+.info {
+  margin: 0.5em 0;
+  flex: 1;
+  height: 100%;
+  p {
+    margin: 0.35em 0;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .bigProjects {
+    flex-direction: row;
+    align-items: center;
+    .info {
+      margin: 0 2em;
+    }
+  }
+  .container {
+    li:nth-child(odd) {
+      .bigProjects {
+        flex-direction: row-reverse;
+        .info {
+          margin: 0 2em 0 0;
+        }
+      }
+    }
+  }
+  .image_container {
+    border-radius: 1em;
+  }
+}

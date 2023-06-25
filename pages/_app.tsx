@@ -1,12 +1,13 @@
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import Layout from "../src/components/Layout";
+
+import { CommonLayout } from "@layout";
 
 import "../styles/globals.scss";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Layout>
+    <CommonLayout>
       <Head>
         <title>Jesús Lares</title>
         <link rel="icon" href="/favicon.svg" />
@@ -43,7 +44,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
       </Head>
       <Component {...pageProps} />
-    </Layout>
+    </CommonLayout>
   );
 }
 

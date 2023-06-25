@@ -1,0 +1,11 @@
+.skills {
+  margin-top: 1em;
+  text-align: start;
+  padding: 0 clamp(5px, 4.5vw, 60px);
+}
+.containerSkills {
+  margin-top: 1em;
+  display: grid;
+  gap: 1em clamp(12px, 2.5vw, 1.25em);
+  grid-template-columns: repeat(auto-fill, minmax(41px, 1fr));
+}

@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@interface": ["./src/core/interface"],
+      "@components": ["./src/core/components"],
+      "@layout": ["./src/core/layout"],
+      "@core/*": ["./src/core/*"],
+      "@e/*": ["./src/entities/*"]
+    }
+  }
+}

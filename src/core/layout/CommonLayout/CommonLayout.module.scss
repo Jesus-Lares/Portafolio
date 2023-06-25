@@ -1,0 +1,23 @@
+.container {
+  display: grid;
+  min-height: 100dvh;
+  grid-template-areas: "main" "footer" "header";
+  grid-template-rows: 1fr auto auto;
+
+  header {
+    grid-area: header;
+  }
+  main {
+    grid-area: main;
+  }
+  footer {
+    grid-area: footer;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .container {
+    grid-template-areas: "header" "main" "footer";
+    grid-template-rows: auto 1fr auto;
+  }
+}

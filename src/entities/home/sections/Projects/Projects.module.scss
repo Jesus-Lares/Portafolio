@@ -1,0 +1,17 @@
+@import "../../../../../styles/variables.scss";
+
+.projects {
+  padding: 2.5em;
+  overflow: hidden;
+  max-width: 968px;
+  margin: 0 auto;
+}
+
+.btnContainer {
+  text-align: center;
+}
+@media screen and (min-width: 767px) {
+  .projects {
+    padding: $header-height 2.5em 0;
+  }
+}

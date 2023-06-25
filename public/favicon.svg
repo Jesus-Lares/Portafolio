@@ -5,11 +5,6 @@
 		path {
 			fill:hsl(220, 57%, 53%)
 		}
-		@media ( prefers-color-scheme: dark ) {
-			path {
-                fill:rgb(237,237,237) !important;
-			}
-		}
 	</style>
     <g transform="matrix(1,0,0,1,-115,-103)">
         <g transform="matrix(0.833731,0,0,0.833731,57.4719,48.933)">
