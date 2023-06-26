@@ -3,6 +3,15 @@
 .container {
   margin: clamp(25px, 4vw, 50px) 0;
   text-align: start;
+  li:nth-child(odd) {
+    .number {
+      right: -1rem;
+      left: auto;
+      border-radius: 0;
+      border-bottom-right-radius: 0.9em;
+      border-top-left-radius: 0.9em;
+    }
+  }
 }
 
 .bigProjects {
@@ -13,10 +22,10 @@
 
 .image_container {
   flex: 1;
-  border-top-left-radius: 1em;
-  border-top-right-radius: 1em;
-  overflow: hidden;
+  position: relative;
   img {
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
     object-fit: cover;
   }
 }
@@ -27,6 +36,24 @@
   p {
     margin: 0.35em 0;
   }
+}
+
+.number {
+  box-shadow: 0 1px 12px 1px rgba(0, 0, 0, 0.5);
+  font-size: 2.25em;
+  font-weight: bold;
+  background-color: #e06d06;
+  color: getColor(text-light);
+  padding: 10px;
+  text-align: center;
+  position: absolute;
+  z-index: 10;
+  top: -0.5rem;
+  left: -1rem;
+  width: 70px;
+  border-radius: 0;
+  border-top-right-radius: 1.1em;
+  border-bottom-left-radius: 1.1em;
 }
 
 @media screen and (min-width: 767px) {

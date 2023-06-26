@@ -20,6 +20,7 @@ const BigProjects: FC<Props> = ({ bigProjects }) => {
         <li key={index}>
           <article className={S.bigProjects}>
             <div className={S.image_container}>
+              <span className={S.number}>{index + 1}</span>
               <Image
                 priority
                 loader={myLoader}
